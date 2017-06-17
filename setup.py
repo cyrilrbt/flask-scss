@@ -10,7 +10,7 @@ with open('README.rst') as readme:
 
 setup(
     name='Flask-Scss',
-    version='0.5',
+    version='0.5.1',
     url='https://github.com/bcarlin/flask-scss',
     license='MIT',
     author='Bruno Carlin',

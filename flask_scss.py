@@ -80,7 +80,7 @@ class Scss(object):
             self.app.logger.warning("The static directory cannot be found."
                                     "Flask-Scss extension has been disabled")
             return
-        self.app.logger.info("Pyscss loaded!")
+        # self.app.logger.info("Pyscss loaded!")
         self.app.before_request(self.update_scss)
 
     def discover_scss(self):
@@ -91,9 +91,9 @@ class Scss(object):
                     self.partials[src_path] = op.getmtime(src_path)
                 elif src_path not in self.partials and src_path not in self.assets:
                     dest_path = src_path.replace(
-                                    self.asset_dir,
-                                    self.static_dir
-                                ).replace('.scss', '.css')
+                        self.asset_dir,
+                        self.static_dir
+                    ).replace('.scss', '.css')
                     self.assets[src_path] = dest_path
 
     def partials_have_changed(self):
